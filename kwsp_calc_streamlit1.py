@@ -4,10 +4,11 @@ import pandas as pd  # Added for displaying the withdrawal schedule as a table
 
 # Streamlit UI
 st.title("KWSP Retirement Calculator")
-st.write("Calculate the maximum starting monthly withdrawal to deplete your savings over a specified period.")
+st.write("Calculate your KWSP maximum starting monthly withdrawal amount to deplete your savings over a specified period.")
+st.write("Yearly increments are based on the inflation rate entered to counter its effects.")
 
 # Input fields
-initial_balance = st.number_input("Initial Balance (RM)", min_value=0.0, value=1600000.0, step=1000.0)
+initial_balance = st.number_input("Initial Balance (RM)", min_value=0.0, value=1300000.0, step=1000.0)
 dividend_rate = st.number_input("Annual Dividend Rate (%)", min_value=0.0, value=5.2, step=0.1) / 100
 inflation_rate = st.number_input("Annual Inflation Rate (%)", min_value=0.0, value=5.0, step=0.1) / 100
 years = st.number_input("Time Period (Years)", min_value=1, value=20, step=1)
